@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Mustapha Alhaji | Backend Developer</title>
+    <title>Ibrahim Mustapha Alhaji | Fullstack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,12 +15,12 @@
             --text-primary: #fafafa;
             --text-secondary: #a1a1aa;
             --text-muted: #71717a;
-            --accent: #f97316;
-            --accent-glow: rgba(249, 115, 22, 0.15);
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.15);
             --border: #27272a;
-            --gradient-1: #f97316;
-            --gradient-2: #fb923c;
-            --gradient-3: #fbbf24;
+            --gradient-1: #3b82f6;
+            --gradient-2: #60a5fa;
+            --gradient-3: #93c5fd;
         }
 
         * {
@@ -340,14 +340,14 @@
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
             margin-top: 3rem;
         }
 
         .stat {
             text-align: center;
-            padding: 1.5rem;
+            padding: 1.5rem 1rem;
             background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -361,12 +361,12 @@
 
         .stat-number {
             font-family: 'Instrument Serif', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--accent);
         }
 
         .stat-label {
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
             margin-top: 0.5rem;
         }
@@ -423,7 +423,7 @@
         }
 
         .tech-icon span {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             color: var(--text-secondary);
         }
@@ -440,14 +440,14 @@
             font-size: 1rem;
         }
 
-        /* Skills Section */
-        .skills {
+        /* Experience Section */
+        .experience {
             padding: 8rem 4rem;
             background: var(--bg-secondary);
             position: relative;
         }
 
-        .skills::before {
+        .experience::before {
             content: '';
             position: absolute;
             top: 0;
@@ -455,6 +455,137 @@
             right: 0;
             height: 1px;
             background: linear-gradient(to right, transparent, var(--border), transparent);
+        }
+
+        .experience-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 5rem;
+        }
+
+        .experience h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .experience-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 200px;
+            top: 2.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .experience-item::after {
+            content: '';
+            position: absolute;
+            left: 200px;
+            top: calc(2.5rem + 12px);
+            bottom: 0;
+            width: 1px;
+            background: var(--border);
+            transform: translateX(-50%);
+        }
+
+        .experience-item:last-child::after {
+            display: none;
+        }
+
+        .experience-date {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .experience-company {
+            color: var(--accent);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .experience-content h3 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-project {
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .experience-content ul {
+            list-style: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .experience-content li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .experience-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .experience-tech span {
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 8rem 4rem;
+            position: relative;
         }
 
         .skills-header {
@@ -479,7 +610,7 @@
         }
 
         .skill-card {
-            background: var(--bg-card);
+            background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 20px;
             padding: 2rem;
@@ -536,7 +667,18 @@
         /* Projects Section */
         .projects {
             padding: 8rem 4rem;
+            background: var(--bg-secondary);
             position: relative;
+        }
+
+        .projects::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
         }
 
         .projects-header {
@@ -559,7 +701,7 @@
         }
 
         .project-card {
-            background: var(--bg-secondary);
+            background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 24px;
             padding: 2.5rem;
@@ -579,7 +721,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(249, 115, 22, 0.05) 100%);
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.05) 100%);
         }
 
         .project-header {
@@ -642,7 +784,7 @@
 
         .project-tech span {
             padding: 0.375rem 0.875rem;
-            background: var(--bg-card);
+            background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 100px;
             font-size: 0.75rem;
@@ -668,7 +810,7 @@
 
         .project-visual {
             height: 250px;
-            background: var(--bg-card);
+            background: var(--bg-secondary);
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -683,19 +825,8 @@
         /* Contact Section */
         .contact {
             padding: 8rem 4rem;
-            background: var(--bg-secondary);
             text-align: center;
             position: relative;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--border), transparent);
         }
 
         .contact h2 {
@@ -729,7 +860,7 @@
             align-items: center;
             gap: 0.75rem;
             padding: 1rem 1.5rem;
-            background: var(--bg-card);
+            background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 100px;
             color: var(--text-secondary);
@@ -745,13 +876,21 @@
             background: var(--accent-glow);
         }
 
-        .contact-email {
+        .contact-info {
             margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
         }
 
-        .contact-email a {
+        .contact-info-item {
+            text-align: center;
+        }
+
+        .contact-info-item a {
             font-family: 'Instrument Serif', serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-style: italic;
             color: var(--text-primary);
             text-decoration: none;
@@ -759,24 +898,16 @@
             transition: color 0.3s ease;
         }
 
-        .contact-email a:hover {
+        .contact-info-item a:hover {
             color: var(--accent);
         }
 
-        .contact-email a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .contact-email a:hover::after {
-            transform: scaleX(1);
+        .contact-info-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
         }
 
         /* Footer */
@@ -786,11 +917,20 @@
             justify-content: space-between;
             align-items: center;
             border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
         }
 
         footer p {
             color: var(--text-muted);
             font-size: 0.875rem;
+        }
+
+        footer .location {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         footer .social-links {
@@ -836,6 +976,10 @@
                 display: none;
             }
 
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .skills-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -847,6 +991,16 @@
             .project-card.featured {
                 grid-column: span 1;
                 grid-template-columns: 1fr;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .experience-item::before,
+            .experience-item::after {
+                display: none;
             }
         }
 
@@ -880,6 +1034,7 @@
             }
 
             .about,
+            .experience,
             .skills,
             .projects,
             .contact {
@@ -887,6 +1042,7 @@
             }
 
             .about h2,
+            .experience h2,
             .skills h2,
             .projects h2,
             .contact h2 {
@@ -905,6 +1061,11 @@
                 flex-direction: column;
                 align-items: start;
                 gap: 1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
             }
 
             footer {
@@ -935,6 +1096,7 @@
         <a href="#" class="logo">Ibrahim.</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -949,11 +1111,11 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <div class="hero-label">Backend Developer</div>
-            <h1>I'm Ibrahim,<br>I build <span>powerful</span><br>backend systems</h1>
+            <div class="hero-label">Fullstack Developer</div>
+            <h1>I'm Ibrahim,<br>I build <span>scalable</span><br>backend systems</h1>
             <p class="hero-description">
-                A passionate developer from Nigeria crafting robust Laravel applications,
-                open-source packages, and scalable APIs. Still learning, always building.
+                Backend Developer with 3+ years of experience building scalable APIs and web applications.
+                Specialized in healthcare and payment systems, improving operational efficiency by up to 60%.
             </p>
             <div class="hero-cta">
                 <a href="#projects" class="btn-primary">
@@ -978,27 +1140,29 @@
             <div class="section-label">About Me</div>
             <h2>Crafting code<br>with purpose</h2>
             <p>
-                I'm a backend developer specializing in PHP and the Laravel ecosystem.
-                I love building tools that make developers' lives easier and creating
-                efficient, maintainable solutions.
+                Backend Developer with 3+ years of experience building scalable APIs and web applications in PHP/Laravel.
+                Specialized in healthcare and payment systems, improving operational efficiency by up to 60% for 200+ users.
             </p>
             <p>
-                Based in Nigeria, I've contributed to various open-source projects and
-                built packages used by developers worldwide. My work focuses on creating
-                elegant APIs, developer tools, and robust backend architectures.
+                Adept at API development, database optimization, and system automation. Collaborative problem-solver
+                passionate about delivering high-performance backend solutions that make a real impact.
             </p>
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number">39+</div>
-                    <div class="stat-label">Public Repos</div>
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">43</div>
-                    <div class="stat-label">Followers</div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Users Served</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Stars Earned</div>
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Efficiency Boost</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Time Saved</div>
                 </div>
             </div>
         </div>
@@ -1010,10 +1174,108 @@
                 <div class="tech-icon center"><span>IMA</span></div>
                 <div class="tech-icon" style="top: 10%; left: 50%;"><span>PHP</span></div>
                 <div class="tech-icon" style="top: 30%; right: 5%;"><span>Laravel</span></div>
-                <div class="tech-icon" style="bottom: 30%; right: 10%;"><span>API</span></div>
-                <div class="tech-icon" style="bottom: 10%; left: 40%;"><span>SQL</span></div>
-                <div class="tech-icon" style="top: 40%; left: 5%;"><span>Git</span></div>
-                <div class="tech-icon" style="top: 60%; left: 15%;"><span>TS</span></div>
+                <div class="tech-icon" style="bottom: 30%; right: 10%;"><span>MySQL</span></div>
+                <div class="tech-icon" style="bottom: 10%; left: 40%;"><span>Flutter</span></div>
+                <div class="tech-icon" style="top: 40%; left: 5%;"><span>Filament</span></div>
+                <div class="tech-icon" style="top: 60%; left: 15%;"><span>REST</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <div class="experience-header reveal">
+            <div class="section-label">Career Journey</div>
+            <h2>Professional Experience</h2>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-item reveal">
+                <div class="experience-meta">
+                    <div class="experience-date">Jan 2025 - Nov 2025</div>
+                    <div class="experience-company">Build Together</div>
+                </div>
+                <div class="experience-content">
+                    <h3>Backend Developer</h3>
+                    <div class="experience-project">EFL Customer Management Portal (CMP)</div>
+                    <ul>
+                        <li>Architected high-performance REST API using PHP, Laravel, and MySQL, reducing manual booking processes by 50%</li>
+                        <li>Streamlined appointment booking system and enhanced customer management workflows</li>
+                        <li>Improved operational efficiency and user experience through automated processes</li>
+                    </ul>
+                    <div class="experience-tech">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item reveal">
+                <div class="experience-meta">
+                    <div class="experience-date">Jun 2025 - Aug 2025</div>
+                    <div class="experience-company">Vuetify Solutions</div>
+                </div>
+                <div class="experience-content">
+                    <h3>Backend Developer (Contract)</h3>
+                    <div class="experience-project">MyFixer Service Marketplace Platform</div>
+                    <ul>
+                        <li>Developed backend infrastructure for artisan-customer connection platform similar to Workman</li>
+                        <li>Built user authentication, profile management, and service request matching systems</li>
+                        <li>Built comprehensive admin dashboard for managing ongoing services and resolving customer disputes</li>
+                        <li>Designed scalable API architecture supporting service provider ratings, booking management, and dispute resolution</li>
+                    </ul>
+                    <div class="experience-tech">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item reveal">
+                <div class="experience-meta">
+                    <div class="experience-date">Apr 2024 - Dec 2025</div>
+                    <div class="experience-company">Haigha Technologies</div>
+                </div>
+                <div class="experience-content">
+                    <h3>Backend Developer</h3>
+                    <div class="experience-project">BOSCHMA Healthcare Management System</div>
+                    <ul>
+                        <li>Engineered centralized healthcare database serving 200+ users across multiple healthcare facilities</li>
+                        <li>Built comprehensive admin dashboard using Laravel and FilamentPHP, automating beneficiary referrals and fee processing</li>
+                        <li>Reduced manual workload by 60% and processing time by 50% through workflow automation</li>
+                        <li>Digitized phone-based referrals and paperwork systems, boosting productivity by 70% and reducing errors by 40%</li>
+                    </ul>
+                    <div class="experience-tech">
+                        <span>Laravel</span>
+                        <span>FilamentPHP</span>
+                        <span>MySQL</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item reveal">
+                <div class="experience-meta">
+                    <div class="experience-date">Jan 2024 - Oct 2024</div>
+                    <div class="experience-company">Vuetify Solutions</div>
+                </div>
+                <div class="experience-content">
+                    <h3>Backend Developer Intern</h3>
+                    <div class="experience-project">EDUTRACK Education Management System</div>
+                    <ul>
+                        <li>Collaborated on education management platform tracking students, schools, and teachers</li>
+                        <li>Developed support request features enabling teachers and schools to request student assistance</li>
+                        <li>Enhanced communication between educational institutions and support services</li>
+                        <li>Contributed to improved resource allocation and student outcome tracking</li>
+                    </ul>
+                    <div class="experience-tech">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1021,48 +1283,86 @@
     <section class="skills" id="skills">
         <div class="skills-header reveal">
             <div class="section-label">Expertise</div>
-            <h2>What I work with</h2>
+            <h2>Technical Skills</h2>
         </div>
         <div class="skills-grid">
             <div class="skill-card reveal">
-                <div class="skill-icon">⚙️</div>
-                <h3>Laravel & PHP</h3>
-                <p>Building robust backend systems, RESTful APIs, and custom packages with Laravel framework.</p>
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                    </svg>
+                </div>
+                <h3>PHP & Laravel</h3>
+                <p>Building robust backend systems, RESTful APIs, and custom packages with Laravel and FilamentPHP.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">📦</div>
-                <h3>Package Development</h3>
-                <p>Creating reusable Laravel packages like RouteScope and ExchangeRate for the PHP community.</p>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">🗄️</div>
-                <h3>Database Design</h3>
-                <p>Designing efficient database schemas, writing optimized queries, and managing migrations.</p>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">🔌</div>
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
                 <h3>API Development</h3>
-                <p>Building scalable RESTful APIs with proper authentication, validation, and documentation.</p>
+                <p>Building scalable RESTful APIs with proper authentication, validation, and comprehensive documentation.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">📱</div>
-                <h3>Flutter</h3>
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                    </svg>
+                </div>
+                <h3>Database Design</h3>
+                <p>MySQL, SQLite - designing efficient schemas, writing optimized queries, and managing migrations.</p>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M8 21h8M12 17v4"/>
+                    </svg>
+                </div>
+                <h3>FilamentPHP</h3>
+                <p>Building comprehensive admin dashboards and CRUD interfaces with Laravel's FilamentPHP.</p>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                        <path d="M12 18h.01"/>
+                    </svg>
+                </div>
+                <h3>Flutter & Dart</h3>
                 <p>Cross-platform mobile development with Flutter for iOS and Android applications.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">🟦</div>
-                <h3>TypeScript & NestJS</h3>
-                <p>Building type-safe Node.js applications with NestJS framework and TypeScript.</p>
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3>JavaScript & SQL</h3>
+                <p>Frontend interactivity and complex database queries for full-stack development.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">⚛️</div>
-                <h3>React</h3>
-                <p>Creating interactive user interfaces and single-page applications with React.</p>
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Payment Integration</h3>
+                <p>Secure payment gateway integrations with Paystack and wallet systems for financial transactions.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">🛠️</div>
-                <h3>DevOps</h3>
-                <p>Version control with Git, CI/CD pipelines, and deployment workflows.</p>
+                <div class="skill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+                    </svg>
+                </div>
+                <h3>Git & DevOps</h3>
+                <p>Version control, Postman for API testing, and deployment workflows with GitHub.</p>
             </div>
         </div>
     </section>
@@ -1071,7 +1371,7 @@
         <div class="projects-header reveal">
             <div>
                 <div class="section-label">Featured Work</div>
-                <h2>Selected projects</h2>
+                <h2>Key Projects</h2>
             </div>
             <a href="https://github.com/projecthanif?tab=repositories" target="_blank" class="btn-secondary">
                 View All
@@ -1086,47 +1386,110 @@
                     <div class="project-header">
                         <div class="project-number">01</div>
                         <div class="project-links">
-                            <a href="https://github.com/projecthanif/routescope" target="_blank" class="project-link" title="GitHub">
+                            <a href="https://github.com/projecthanif" target="_blank" class="project-link" title="GitHub">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
-                            <a href="https://packagist.org/packages/projecthanif/routescope" target="_blank" class="project-link" title="Packagist">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7v10"/>
-                                </svg>
-                            </a>
                         </div>
                     </div>
-                    <h3>RouteScope</h3>
-                    <p>A powerful route inspection tool for Laravel developers. Easily visualize and debug your application routes with detailed information about middleware, controllers, and parameters.</p>
+                    <h3>Bill Payment API</h3>
+                    <p>Developed secure payment API with wallet system for airtime purchases and utility payments. Implemented concurrency control mechanisms to prevent race conditions in financial transactions with comprehensive transaction logging and audit trail system.</p>
                     <div class="project-tech">
-                        <span>Laravel</span>
                         <span>PHP</span>
-                        <span>Blade</span>
-                        <span>Packagist</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                        <span>REST API</span>
                     </div>
                     <div class="project-stats">
                         <div class="project-stat">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                             </svg>
-                            7 stars
+                            Secure Transactions
                         </div>
                         <div class="project-stat">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 18V6l10 6-10 6z"/>
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
                             </svg>
-                            Laravel Package
+                            Real-time Processing
                         </div>
                     </div>
                 </div>
-                <div class="project-visual">{ }</div>
+                <div class="project-visual">$</div>
             </div>
 
             <div class="project-card reveal">
                 <div class="project-header">
                     <div class="project-number">02</div>
+                    <div class="project-links">
+                        <a href="https://github.com/projecthanif/TechPlanet" target="_blank" class="project-link" title="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://techplanet-ecommerce.netlify.app/" target="_blank" class="project-link" title="Live Demo">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <h3>TechPlanet E-commerce</h3>
+                <p>Full-featured e-commerce platform for tech accessories with Paystack payment integration, shopping cart, and real-time inventory tracking.</p>
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>Laravel</span>
+                    <span>Paystack</span>
+                    <span>MySQL</span>
+                </div>
+                <div class="project-stats">
+                    <div class="project-stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Live Demo
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-number">03</div>
+                    <div class="project-links">
+                        <a href="https://github.com/projecthanif/routescope" target="_blank" class="project-link" title="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://packagist.org/packages/projecthanif/routescope" target="_blank" class="project-link" title="Packagist">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <h3>RouteScope</h3>
+                <p>A powerful route inspection tool for Laravel developers. Visualize and debug routes with detailed middleware, controller, and parameter information.</p>
+                <div class="project-tech">
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>Blade</span>
+                </div>
+                <div class="project-stats">
+                    <div class="project-stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        7 stars
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-number">04</div>
                     <div class="project-links">
                         <a href="https://github.com/projecthanif/nativemailer" target="_blank" class="project-link" title="GitHub">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -1154,40 +1517,7 @@
 
             <div class="project-card reveal">
                 <div class="project-header">
-                    <div class="project-number">03</div>
-                    <div class="project-links">
-                        <a href="https://github.com/projecthanif/remind.me" target="_blank" class="project-link" title="GitHub">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://remind-me-mauve.vercel.app" target="_blank" class="project-link" title="Live Demo">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <h3>Remind.me</h3>
-                <p>A Todo app built from scratch with PHP showcasing MVC architecture, OOP principles, and PSR-4 autoloading without any frameworks.</p>
-                <div class="project-tech">
-                    <span>PHP</span>
-                    <span>MVC</span>
-                    <span>OOP</span>
-                </div>
-                <div class="project-stats">
-                    <div class="project-stat">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        2 stars
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="project-header">
-                    <div class="project-number">04</div>
+                    <div class="project-number">05</div>
                     <div class="project-links">
                         <a href="https://github.com/projecthanif/exchangerate" target="_blank" class="project-link" title="GitHub">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -1197,7 +1527,7 @@
                     </div>
                 </div>
                 <h3>ExchangeRate</h3>
-                <p>Laravel package to easily integrate exchange rate API functionality into your applications.</p>
+                <p>Laravel package to leverage exchange rate API for currency conversion in your applications.</p>
                 <div class="project-tech">
                     <span>Laravel</span>
                     <span>API</span>
@@ -1215,21 +1545,26 @@
 
             <div class="project-card reveal">
                 <div class="project-header">
-                    <div class="project-number">05</div>
+                    <div class="project-number">06</div>
                     <div class="project-links">
-                        <a href="https://github.com/projecthanif/flutter_user_lifecycle_detection" target="_blank" class="project-link" title="GitHub">
+                        <a href="https://github.com/projecthanif/remind.me" target="_blank" class="project-link" title="GitHub">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
+                        <a href="https://remind-me-mauve.vercel.app" target="_blank" class="project-link" title="Live Demo">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <h3>Flutter Lifecycle Detection</h3>
-                <p>A Flutter project demonstrating user lifecycle detection and state management patterns in mobile apps.</p>
+                <h3>Remind.me</h3>
+                <p>Todo app showcasing pure PHP MVC architecture, OOP principles, and PSR-4 autoloading without frameworks.</p>
                 <div class="project-tech">
-                    <span>Flutter</span>
-                    <span>Dart</span>
-                    <span>Mobile</span>
+                    <span>PHP</span>
+                    <span>MVC</span>
+                    <span>OOP</span>
                 </div>
                 <div class="project-stats">
                     <div class="project-stat">
@@ -1237,39 +1572,6 @@
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                         2 stars
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="project-header">
-                    <div class="project-number">06</div>
-                    <div class="project-links">
-                        <a href="https://github.com/projecthanif/TechPlanet" target="_blank" class="project-link" title="GitHub">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://techplanet-ecommerce.netlify.app/" target="_blank" class="project-link" title="Live Demo">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <h3>TechPlanet</h3>
-                <p>A fully functional e-commerce frontend showcasing product listings, cart functionality, and modern UI design.</p>
-                <div class="project-tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <div class="project-stats">
-                    <div class="project-stat">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        1 star
                     </div>
                 </div>
             </div>
@@ -1303,21 +1605,35 @@
                     </svg>
                     Twitter/X
                 </a>
-                <a href="https://t.me/projecthanif" target="_blank" class="contact-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                <a href="tel:+2349061887329" class="contact-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
-                    Telegram
+                    Call Me
                 </a>
             </div>
-            <div class="contact-email">
-                <a href="mailto:iamustapha213@gmail.com">iamustapha213@gmail.com</a>
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-info-label">Email</div>
+                    <a href="mailto:iamustapha213@gmail.com">iamustapha213@gmail.com</a>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-label">Phone</div>
+                    <a href="tel:+2349061887329">+234 906 188 7329</a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Ibrahim Mustapha Alhaji. Built with passion.</p>
+        <div class="location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Abuja, Nigeria
+        </div>
         <div class="social-links">
             <a href="https://github.com/projecthanif" target="_blank" aria-label="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1350,7 +1666,7 @@
         });
 
         // Hover effects
-        const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-card, .stat');
+        const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-card, .stat, .experience-item');
         hoverElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'scale(1.5)';
